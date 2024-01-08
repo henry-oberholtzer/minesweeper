@@ -1,6 +1,6 @@
 # Minemopper
 
-A mobile minesweeper game by Grant Abel, Aaron Meija, Teddy Peterschmidt and Henry Oberholtzer
+A mobile minesweeper game by Grant Abel, Aaron Meija, Teddy Peterschmidt, Christopher Davila and Henry Oberholtzer
 
 ## Technologies
 
@@ -10,20 +10,52 @@ A mobile minesweeper game by Grant Abel, Aaron Meija, Teddy Peterschmidt and Hen
 - React Toolkit
 - Firestore, database
 
+## Minimum Viable Product:
+- Includes the ability to play a full game of Minesweeper.
+- Includes load/save functionality.
+
 ## Features 
 
-- Randomly generated boards, perhaps saved in an archive of games to be "replayable"
+Core:
+- Randomly generated game board
 - Game timer
+- Mines remaining count
 - Easy ability to set whether a long press sets a flag or clears a square
 - Board scales to phone/device UI size
 - Selection of difficulty (easy, medium, hard, custom map by users?)
-- Two Player (sort of a race to mark the most mines, maybe the other player can't see what squares the other player has cleared?)
+
+
+Cloud:
+- Boards saved in an archive of games to be "replayable"
 - Cloud save feature
 - Cloud leaderboard
+
+
+Stretch:
+- Oops mode (allows user to go back on a mine that was hit)
+- Two Player (sort of a race to mark the most mines, maybe the other player can't see what squares the other player has cleared?)
 - Between games, a pop up add for each contributor (UNSKIPPABLE!!!)
+- Selectable themes
+
 
 ## Functions & Components
 
+### Pages
+- Game Page
+    - Gameboard
+    - Game Information
+    - Game Controls
+- Main Menu
+    - Start / Resume Game
+        - Can pick from saved minesweeper games or load from database?
+    - Difficulty
+        - Changes mine density
+    - View Leaderboard
+    - Settings
+        - Oops Mode
+        - Player Stats
+- Leaderboard
+    - Fetches & displays player data from server
 
 ### UI Components
 - Load Screen (manages loading game on bootup, and saving data)
@@ -47,11 +79,18 @@ A mobile minesweeper game by Grant Abel, Aaron Meija, Teddy Peterschmidt and Hen
     - Generates game board based on chosen difficulty
     - Outputs an object
 - Timer
-    - 
+    - Recieves a start, sends out a final time when stopped, sends out updated time as game plays
+- Bombs remaining count
+    - Determines bombs remaining in the gameboard that have yet to be found
+
+- Overlay Computation
+    - Computes the numbers around the grid for bombs
 - dbStore
     - Recieves input to store things to database
         - Gameboards 
         - Game statistics
+        - User Accounts
+        - 
 - dbFetch
     - Retrieves data
 
@@ -81,7 +120,7 @@ A mobile minesweeper game by Grant Abel, Aaron Meija, Teddy Peterschmidt and Hen
 #### Gameboard State Data
 ```
 {
-    
+
 }
 ```
 

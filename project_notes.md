@@ -63,6 +63,7 @@ A mobile minesweeper game by Grant Abel, Aaron Meija, Teddy Peterschmidt and Hen
     boardID: string,
     difficulty: string,
     board: [0, 0, 0, 1, 0, 0, 1, 0, 1] // Contains the number of mines for the given difficulty
+    revealedBoard: [0, 0, 0, 1, 0, 0, 1, 0, 1] // Contains what information is displayed to the user about the current board (revealed bombs, flags, etc.)
 }
 ```
 

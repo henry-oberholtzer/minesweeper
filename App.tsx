@@ -6,6 +6,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SignIn from './components/SignIn';
 import MainMenu from './components/MainMenu';
 
+const Stack = createNativeStackNavigator();
+
 export default function App() {
 	return (
 		<View style={styles.container}>

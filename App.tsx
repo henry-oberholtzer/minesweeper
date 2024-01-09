@@ -11,9 +11,13 @@ const Stack = createNativeStackNavigator();
 export default function App() {
 	return (
 		<NavigationContainer>
-			<Stack.Navigator>What's up im gonna be Minesweeper (or Minemopper)!</Text>
-			<Stack.Screen name='SignIn' component={SignIn}/>
-			<Stack.Navigator />
+			<Stack.Navigator>
+				<Text>What's up im gonna be Minesweeper (or Minemopper)!</Text>
+				<Stack.Screen
+					name="SignIn"
+					component={SignIn}
+				/>
+			</Stack.Navigator>
 		</NavigationContainer>
 	);
 }
